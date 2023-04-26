@@ -8,8 +8,8 @@ const Layout = lazy(() => import('./Layout/Layout'))
 const HomePage = lazy(()=>import('pages/HomePage'))
 const MoviesPage = lazy(()=>import('pages/MoviesPage'))
 const MovieSubPage = lazy(()=>import('pages/MovieSubPage/MovieSubPage'))
-const CastDetails = lazy(()=>import('pages/CastDetails'))
-const ReviewsDetails = lazy(()=>import('pages/ReviewsDetails'))
+const CastDetails = lazy(()=>import('components/Cast/CastDetails'))
+const ReviewsDetails = lazy(()=>import('components/Reviews/ReviewsDetails'))
 
 
 

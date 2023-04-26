@@ -29,7 +29,7 @@ const MoviesPage = () => {
         <input type="text" name="search" />
         <button type="submit">Search</button>
       </form>
-      {query && (
+      {movies.length !== 0 && (
         <>
           {' '}
           <ul>
