@@ -1,7 +1,7 @@
 import { fetchMovieReviews } from 'servicesAPI/fetchMovies';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types'
+
 
 
 const ReviewsDetails = () => {
@@ -33,10 +33,3 @@ const ReviewsDetails = () => {
 export default ReviewsDetails
 
 
-ReviewsDetails.propTypes =  {
-  reviews: PropTypes.shape({
-    author: PropTypes.string,
-    id: PropTypes.number, 
-    content: PropTypes.string, 
-  })
-}

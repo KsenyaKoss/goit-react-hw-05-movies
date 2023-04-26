@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useFetchMovie } from '../../hooks/useFetchMovie';
 import {StyledWrapper, StyledUl} from './MovieSubPage.styled'
-import PropTypes from 'prop-types'
+
 
 const MovieSubPage = () => {
   const movie = useFetchMovie();
@@ -45,30 +45,8 @@ const MovieSubPage = () => {
 
 export default MovieSubPage
 
-MovieSubPage.propTypes =  {
-  movie: PropTypes.shape({
-    title: PropTypes.string,
-     vote_average: PropTypes.number, 
-     overview: PropTypes.string, 
-     genres: PropTypes.object,
-  })
-}
 
 
-// ImageGallery.propTypes = {
-//   pictures: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number,
-//     })
-//   ),
-//   openModal: PropTypes.func,
-// };
 
-// ImageGalleryItem.propTypes = {
-//   card: PropTypes.shape({
-//     largeImageURL: PropTypes.string,
-//     webformatURL: PropTypes.string,
-//   }),
-//   openModal: PropTypes.func,
-// };
+
 

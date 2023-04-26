@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types'
-import { NotFound } from 'pages/NotFound';
 import { lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';;
+import { Routes, Route, Navigate } from 'react-router-dom';;
 
 
 const Layout = lazy(() => import('./Layout/Layout'))
@@ -25,20 +23,10 @@ export const App = () => {
           <Route path="reviews" element={<ReviewsDetails />} />
         </Route>
       </Route>
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<Navigate to='/'/>} />
     </Routes>
 
   );
 };
 
 
-App.propTypes = {
-  Layout: PropTypes.element,
-  HomePage: PropTypes.element,
-  MoviesPage: PropTypes.element,
-  MovieSubPage: PropTypes.element,
-  CastDetails: PropTypes.element,
-  ReviewsDetails: PropTypes.element,
-  NotFound: PropTypes.element,
-}
-  
