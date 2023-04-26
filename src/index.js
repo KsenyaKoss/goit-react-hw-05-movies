@@ -14,7 +14,7 @@ img{
 `;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/github.com/KsenyaKoss/goit-react-hw-05-movies'>
+  <BrowserRouter basename='/KsenyaKoss/goit-react-hw-05-movies'>
     <React.StrictMode>
       <App />
       <Global />
