@@ -1,13 +1,27 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.bbfaee40.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.34bb4896.js",
+    "static/js/302.ab75a2a7.chunk.js": "/goit-react-hw-05-movies/static/js/302.ab75a2a7.chunk.js",
+    "static/js/983.3896ec20.chunk.js": "/goit-react-hw-05-movies/static/js/983.3896ec20.chunk.js",
+    "static/js/797.da90222f.chunk.js": "/goit-react-hw-05-movies/static/js/797.da90222f.chunk.js",
+    "static/js/550.1707db6b.chunk.js": "/goit-react-hw-05-movies/static/js/550.1707db6b.chunk.js",
+    "static/js/231.9791afd6.chunk.js": "/goit-react-hw-05-movies/static/js/231.9791afd6.chunk.js",
+    "static/js/535.f5efd65b.chunk.js": "/goit-react-hw-05-movies/static/js/535.f5efd65b.chunk.js",
+    "static/js/279.62eeb4c6.chunk.js": "/goit-react-hw-05-movies/static/js/279.62eeb4c6.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.bbfaee40.js.map": "/goit-react-hw-05-movies/static/js/main.bbfaee40.js.map"
+    "main.34bb4896.js.map": "/goit-react-hw-05-movies/static/js/main.34bb4896.js.map",
+    "302.ab75a2a7.chunk.js.map": "/goit-react-hw-05-movies/static/js/302.ab75a2a7.chunk.js.map",
+    "983.3896ec20.chunk.js.map": "/goit-react-hw-05-movies/static/js/983.3896ec20.chunk.js.map",
+    "797.da90222f.chunk.js.map": "/goit-react-hw-05-movies/static/js/797.da90222f.chunk.js.map",
+    "550.1707db6b.chunk.js.map": "/goit-react-hw-05-movies/static/js/550.1707db6b.chunk.js.map",
+    "231.9791afd6.chunk.js.map": "/goit-react-hw-05-movies/static/js/231.9791afd6.chunk.js.map",
+    "535.f5efd65b.chunk.js.map": "/goit-react-hw-05-movies/static/js/535.f5efd65b.chunk.js.map",
+    "279.62eeb4c6.chunk.js.map": "/goit-react-hw-05-movies/static/js/279.62eeb4c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.bbfaee40.js"
+    "static/js/main.34bb4896.js"
   ]
 }
