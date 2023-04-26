@@ -1,8 +1,10 @@
 import { fetchMovieReviews } from 'servicesAPI/fetchMovies';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
-export const ReviewsDetails = () => {
+
+const ReviewsDetails = () => {
   const [reviews, setReviews] = useState([]);
   const { id } = useParams();
   
@@ -10,8 +12,6 @@ export const ReviewsDetails = () => {
   useEffect(() => {
     fetchMovieReviews(id).then(setReviews);
   }, [id]);
-
-  console.log(reviews);
 
   return (
   <>
@@ -29,3 +29,14 @@ export const ReviewsDetails = () => {
 
 )
 };
+
+export default ReviewsDetails
+
+
+ReviewsDetails.propTypes =  {
+  reviews: PropTypes.shape({
+    author: PropTypes.string,
+    id: PropTypes.number, 
+    content: PropTypes.string, 
+  })
+}

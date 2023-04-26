@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { fetchTrendingMovies } from 'servicesAPI/fetchMovies';
 
-export const HomePage = () => {
+const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const location = useLocation()
 
@@ -10,7 +10,6 @@ export const HomePage = () => {
     fetchTrendingMovies().then(setMovies);
   }, []);
 
-  console.log(movies);
   return (
     <>
       <h2>Trending today</h2>;
@@ -24,3 +23,5 @@ export const HomePage = () => {
     </>
   );
 };
+
+export default HomePage

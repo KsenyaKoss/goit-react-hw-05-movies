@@ -2,8 +2,9 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchMovieByQuery } from '../servicesAPI/fetchMovies';
+import PropTypes from 'prop-types'
 
-export const MoviesPage = () => {
+const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query');
@@ -45,3 +46,14 @@ export const MoviesPage = () => {
     </>
   );
 };
+
+
+export default MoviesPage
+
+
+MoviesPage.propTypes =  {
+  movies: PropTypes.shape({
+    title: PropTypes.string,
+    id: PropTypes.number, 
+})
+}

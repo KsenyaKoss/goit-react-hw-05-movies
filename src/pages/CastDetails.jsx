@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { fetchMovieCast } from 'servicesAPI/fetchMovies';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export const CastDetails = () => {
+const CastDetails = () => {
   const [casts, setCasts] = useState([]);
   const { id } = useParams();
 
@@ -10,19 +11,36 @@ export const CastDetails = () => {
     fetchMovieCast(id).then(setCasts);
   }, [id]);
 
-  console.log(casts);
-
-    return (<>
+  return (
+    <>
+      {casts.length === 0 ? (
+        <h3>There is no such information</h3>
+      ) : (
         <ul>
-            {casts.map(({ profile_path, name, character, id }) => 
-                <li key={id}>
-                    <img src={profile_path} alt="img" width={50} />
-                    <p>{name}</p>
-                    <p>{character}</p>
-      </li>
-  )}
+          {casts.map(({ profile_path, name, character, id }) => (
+            <li key={id}>
+              <img
+                src={`https://image.tmdb.org/t/p/w200/${profile_path}`}
+                alt="img"
+                width={50}
+              />
+              <p>{name}</p>
+              <p>{character}</p>
+            </li>
+          ))}
         </ul>
+      )}
     </>
-    
-    )
+  );
+};
+
+export default CastDetails;
+
+CastDetails.propTypes = {
+  casts: PropTypes.shape({
+    profile_path: PropTypes.string,
+    id: PropTypes.number,
+    character: PropTypes.string,
+    name: PropTypes.string,
+  }),
 };

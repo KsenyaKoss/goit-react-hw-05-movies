@@ -1,14 +1,21 @@
-import { Routes, Route } from 'react-router-dom';
-import { Layout } from './Layout/Layout';
-import { MoviesPage } from 'pages/MoviesPage';
-import { HomePage } from 'pages/HomePage';
+import PropTypes from 'prop-types'
 import { NotFound } from 'pages/NotFound';
-import { MovieSubPage } from 'pages/MovieSubPage';
-import { CastDetails } from 'pages/CastDetails';
-import { ReviewsDetails } from 'pages/ReviewsDetails';
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';;
+
+
+const Layout = lazy(() => import('./Layout/Layout'))
+const HomePage = lazy(()=>import('pages/HomePage'))
+const MoviesPage = lazy(()=>import('pages/MoviesPage'))
+const MovieSubPage = lazy(()=>import('pages/MovieSubPage/MovieSubPage'))
+const CastDetails = lazy(()=>import('pages/CastDetails'))
+const ReviewsDetails = lazy(()=>import('pages/ReviewsDetails'))
+
+
 
 export const App = () => {
   return (
+    
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
@@ -20,5 +27,18 @@ export const App = () => {
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
+
   );
 };
+
+
+App.propTypes = {
+  Layout: PropTypes.element,
+  HomePage: PropTypes.element,
+  MoviesPage: PropTypes.element,
+  MovieSubPage: PropTypes.element,
+  CastDetails: PropTypes.element,
+  ReviewsDetails: PropTypes.element,
+  NotFound: PropTypes.element,
+}
+  
